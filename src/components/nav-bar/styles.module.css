@@ -1,0 +1,26 @@
+.area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  width: 216px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.area ul {
+  display: flex;
+  gap: 16px;
+  list-style-type: none;
+}
+
+.area a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-size: 18px;
+  color: #000;
+  display: inline-block;
+  padding: 16px;
+}
