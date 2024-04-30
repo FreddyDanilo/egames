@@ -1,6 +1,7 @@
 import styles from "./app.module.css";
 import { Header } from "./components/header";
 import { NavBar } from "./components/nav-bar";
+import { SocialMedias } from "./components/social-medias";
 import { Statistics } from "./components/statistics";
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
       <NavBar />
       <Header />
       <Statistics />
+      <SocialMedias />
     </div>
   );
 }

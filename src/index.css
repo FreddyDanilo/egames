@@ -14,3 +14,39 @@
   margin: 0 auto;
   z-index: 1;
 }
+
+@keyframes a-00 {
+  0% {
+    transform: translateY(-8%) rotate(2deg);
+  }
+  100% {
+    transform: translateY(8%) rotate(-2deg);
+  }
+}
+
+@keyframes a-01 {
+  0% {
+    transform: translateX(-3%) rotate(1deg);
+  }
+  100% {
+    transform: translateX(3%) rotate(-1deg);
+  }
+}
+
+@keyframes a-02 {
+  0% {
+    transform: translateY(-1%) scale(1.01) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(1%) scale(1) rotate(1deg);
+  }
+}
+
+@keyframes a-03 {
+  0% {
+    transform: translateY(-1%) scale(1.01) rotate(1deg);
+  }
+  100% {
+    transform: translateY(1%) scale(1) rotate(-1deg);
+  }
+}
