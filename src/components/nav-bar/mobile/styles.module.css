@@ -1,0 +1,51 @@
+.button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  border: 0;
+  color: #000;
+  cursor: pointer;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.button:hover {
+  background-color: #eaddff;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 44px - 32px);
+  background-color: #fff;
+  z-index: 4;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  border-right: 1px solid #eaddff;
+  transition: 0.5s;
+}
+
+.menu a {
+  width: 100%;
+  display: block;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.menu a:hover {
+  background-color: #eaddff;
+}
+
+.area {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .area {
+    display: block;
+  }
+}

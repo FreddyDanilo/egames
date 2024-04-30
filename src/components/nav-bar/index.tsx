@@ -1,3 +1,4 @@
+import { Mobile } from "./mobile";
 import styles from "./styles.module.css";
 
 export function NavBar() {
@@ -25,6 +26,8 @@ export function NavBar() {
             </li>
           </ul>
         </nav>
+
+        <Mobile />
       </div>
     </div>
   );
