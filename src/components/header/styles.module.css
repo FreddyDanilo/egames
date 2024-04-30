@@ -104,6 +104,10 @@
     font-size: 40px;
   }
 
+  .border {
+    width: 100%;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     gap: 64px;
