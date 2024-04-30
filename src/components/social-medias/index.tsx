@@ -111,7 +111,7 @@ export function SocialMedias() {
               style={{
                 width: "90%",
                 height: "40%",
-                left: "-10n%",
+                left: "-10%",
                 top: "45%",
                 animationName: "a-01",
                 animationDelay: "1s",

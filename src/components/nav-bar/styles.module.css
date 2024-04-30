@@ -25,6 +25,21 @@
   padding: 16px;
 }
 
+.language {
+  border: 1px solid #00000025;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 90px;
+}
+
+.language span {
+  font-family: "Inter";
+  font-size: 18px;
+  color: #000;
+}
+
 @media screen and (max-width: 900px) {
   .area nav {
     display: none;

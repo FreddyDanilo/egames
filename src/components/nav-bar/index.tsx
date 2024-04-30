@@ -1,3 +1,4 @@
+import { ChevronDown, Languages } from "lucide-react";
 import { Mobile } from "./mobile";
 import styles from "./styles.module.css";
 
@@ -21,8 +22,10 @@ export function NavBar() {
               <a href="#">Download</a>
             </li>
 
-            <li>
-              <a href="#">Português</a>
+            <li className={styles.language}>
+              <Languages size={22} />
+              <span>Português</span>
+              <ChevronDown size={22} />
             </li>
           </ul>
         </nav>
