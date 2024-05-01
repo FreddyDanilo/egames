@@ -7,9 +7,9 @@
   border: 0;
   color: #000;
   cursor: pointer;
-  background-color: transparent;
   cursor: pointer;
   transition: 0.25s;
+  background-color: #eaddff80;
 }
 
 .button:hover {
