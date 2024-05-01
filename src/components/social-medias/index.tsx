@@ -1,6 +1,7 @@
 import { Gamepad2, Share2, UsersRound } from "lucide-react";
 import styles from "./styles.module.css";
 import { VideoPlayer } from "./video-player";
+import { Cards } from "./cards";
 
 export function SocialMedias() {
   return (
@@ -131,6 +132,8 @@ export function SocialMedias() {
           </h2>
 
           <VideoPlayer />
+
+          <Cards />
         </div>
       </div>
     </div>
