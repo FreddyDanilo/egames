@@ -1,7 +1,11 @@
+import { useNumber } from "../../hooks/useNumber";
 import { STATISTICS } from "./api";
 import styles from "./styles.module.css";
+import CountUp from "react-countup";
 
 export function Statistics() {
+  const { format } = useNumber({ lang: "pt-br" });
+
   return (
     <div className={styles.area}>
       <div className="container">
@@ -14,11 +18,19 @@ export function Statistics() {
             {STATISTICS.map((data) => (
               <div key={data.id} className={styles.box}>
                 <div className={styles.icon}>
-                  <img src={data.image} alt={data.title} />
+                  <img src={data.image} alt={data.description} />
                 </div>
 
                 <div className={styles.details}>
-                  <h3>{data.title}</h3>
+                  <h3>
+                    <CountUp
+                      enableScrollSpy={true}
+                      end={format(data.title).number}
+                      prefix="+"
+                      suffix={" " + format(data.title).suffix}
+                      duration={4}
+                    />
+                  </h3>
                   <span>{data.description}</span>
                 </div>
               </div>
