@@ -21,7 +21,7 @@ export function Statistics() {
                   <img src={data.image} alt={data.description} />
                 </div>
 
-                <div className={styles.details}>
+                <div className={styles.details} style={{ width: 200 }}>
                   <h3>
                     <CountUp
                       enableScrollSpy={true}
