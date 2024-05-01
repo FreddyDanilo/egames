@@ -1,10 +1,11 @@
 .area {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
   position: relative;
+  padding-top: 128px;
 }
 
 .gradient {
@@ -125,7 +126,7 @@
     object-fit: contain;
   }
 
-  .area::after {
-    display: none;
+  .area {
+    padding-top: 88px;
   }
 }
