@@ -70,4 +70,9 @@
   .grid {
     grid-template-columns: 1fr;
   }
+
+  .area::after {
+    left: -10%;
+    top: -50%;
+  }
 }
