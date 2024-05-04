@@ -1,13 +1,5 @@
-import {
-  BadgeCheck,
-  CirclePlay,
-  Eye,
-  Pause,
-  Rocket,
-  Scan,
-  Star,
-  Trophy,
-} from "lucide-react";
+import { Scan, Star, Trophy } from "lucide-react";
+import { BadgeCheck, CirclePlay, Eye, Pause, Rocket } from "lucide-react";
 import styles from "./styles.module.css";
 import { USERS } from "./api";
 

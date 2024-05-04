@@ -1,0 +1,31 @@
+.area {
+  padding: 128px 0;
+  background-color: #000;
+}
+
+.title {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  margin: 64px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  gap: 32px;
+  padding: 32px;
+}
+
+.flex::-webkit-scrollbar {
+  display: none;
+}

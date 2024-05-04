@@ -1,0 +1,75 @@
+.area {
+  min-width: 40vw;
+  aspect-ratio: 16/11;
+  background-color: #202126;
+  border-radius: 16px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.profile > img {
+  border-radius: 16px;
+  object-fit: cover;
+  height: 122px;
+  width: 110px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.description {
+  font-size: 18px;
+  color: #b3b0b8;
+  font-family: "Inter";
+}
+
+.quote {
+  font-family: "Inter";
+  font-size: 26px;
+  color: #fff;
+  max-width: 611px;
+  font-weight: 400;
+}
+
+.quote_area {
+  position: relative;
+}
+
+.favorite {
+  height: 46px;
+  position: relative;
+  background-color: #ffffff33;
+  border-radius: 24px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  padding-right: calc(46px + 16px);
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff33;
+  border-radius: 50%;
+}

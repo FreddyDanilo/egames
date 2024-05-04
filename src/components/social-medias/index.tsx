@@ -127,10 +127,13 @@ export function SocialMedias() {
       <div className="container">
         <div className={styles.details} style={{ placeItems: "center" }}>
           <Gamepad2 size={36} color="#fff" />
+
           <h2 style={{ maxWidth: 742, textAlign: "center" }}>
             Você por dentro de tudo o que acontece com seu jogo favorito
           </h2>
+
           <VideoPlayer />
+
           <Cards />
 
           <Community />
