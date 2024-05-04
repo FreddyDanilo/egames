@@ -2,6 +2,7 @@ import { Gamepad2, Share2, UsersRound } from "lucide-react";
 import styles from "./styles.module.css";
 import { VideoPlayer } from "./video-player";
 import { Cards } from "./cards";
+import { Community } from "./community";
 
 export function SocialMedias() {
   return (
@@ -126,14 +127,13 @@ export function SocialMedias() {
       <div className="container">
         <div className={styles.details} style={{ placeItems: "center" }}>
           <Gamepad2 size={36} color="#fff" />
-
           <h2 style={{ maxWidth: 742, textAlign: "center" }}>
             Você por dentro de tudo o que acontece com seu jogo favorito
           </h2>
-
           <VideoPlayer />
-
           <Cards />
+
+          <Community />
         </div>
       </div>
     </div>
