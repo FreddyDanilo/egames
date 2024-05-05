@@ -1,4 +1,5 @@
 import styles from "./app.module.css";
+import { Cta } from "./components/cta";
 import { Header } from "./components/header";
 import { NavBar } from "./components/nav-bar";
 import { Quotes } from "./components/quotes";
@@ -13,6 +14,7 @@ export default function App() {
       <Statistics />
       <SocialMedias />
       <Quotes />
+      <Cta />
     </div>
   );
 }

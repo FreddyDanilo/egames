@@ -1,0 +1,122 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 64px;
+}
+
+.title {
+  font-size: 46px;
+  max-width: 430px;
+  color: #000;
+  font-weight: 700;
+}
+
+.cover {
+  position: relative;
+}
+
+.cover img {
+  position: absolute;
+  bottom: -2px;
+  right: 10%;
+  height: 140%;
+  object-fit: contain;
+}
+
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.button button {
+  all: unset;
+  cursor: pointer;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.star {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 23px;
+  border: 1px solid #00000020;
+  padding: 0 16px;
+  width: max-content;
+}
+
+.star > span {
+  font-size: 24px;
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+.update {
+  display: grid;
+}
+
+.update > p {
+  font-size: 22px;
+  font-family: "Inter";
+}
+
+.update > span {
+  color: #7c7a80;
+  font-size: 12px;
+  font-family: "Inter";
+}
+
+@media screen and (max-width: 1230px) {
+  .cover img {
+    height: 110%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details {
+    padding: 32px;
+  }
+
+  .rating {
+    margin: 0;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .cover {
+    aspect-ratio: 1/1;
+  }
+
+  .cover img {
+    height: 100%;
+    right: 0;
+    border-bottom-right-radius: 16px;
+  }
+}
