@@ -1,16 +1,43 @@
 import { UserPlus } from "lucide-react";
 import styles from "./styles.module.css";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 export function Header() {
+  const titleVariants = {
+    hidden: { filter: "blur(15px)", opacity: 0 },
+    reveal: { filter: "blur(0px)", opacity: 1 },
+  };
+
+  const titleChars =
+    "A maior e mais completa comunidade gamer da internet".split("");
+
+  const itemVariants = {
+    hidden: { transform: "translateY(40px)", opacity: 0 },
+    reveal: { transform: "translateY(0px)", opacity: 1 },
+  };
+
+  const coverVariants = {
+    hidden: { transform: "translate(70%,70%) rotate(-45deg)", opacity: 0 },
+    reveal: { transform: "translate(0%,0%) rotate(0deg)", opacity: 1 },
+  };
+
   return (
     <header className={styles.area}>
       <div className={styles.gradient} />
 
       <div className="container">
-        <div className={styles.grid}>
+        <motion.div
+          className={styles.grid}
+          whileInView={"reveal"}
+          initial="hidden"
+        >
           <div className={styles.details}>
-            <div className={styles.statistics}>
+            <motion.div
+              className={styles.statistics}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
+            >
               <span className={styles.players}>
                 <UserPlus size={16} />
                 <CountUp end={25523} prefix="+" />
@@ -19,18 +46,39 @@ export function Header() {
               <span style={{ fontWeight: 500, fontFamily: "Inter" }}>
                 eGamers online agora!
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className={styles.title}>
-              A maior e mais completa comunidade gamer da internet
-            </h1>
+            <motion.h1
+              className={styles.title}
+              whileInView={"reveal"}
+              initial="hidden"
+              transition={{ staggerChildren: 0.05 }}
+            >
+              {titleChars.map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={titleVariants}
+                  transition={{ duration: 0.25 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h1>
 
-            <span className={styles.description}>
+            <motion.span
+              className={styles.description}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
+            >
               Curta, compartilhe, assista e acompanhe tudo sobre o mundo gamer
               em um só lugar.
-            </span>
+            </motion.span>
 
-            <div className={styles.button}>
+            <motion.div
+              className={styles.button}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
+            >
               <button type="button">
                 <img
                   src="/button-google-play.png"
@@ -46,18 +94,28 @@ export function Header() {
                   style={{ maxWidth: 214 }}
                 />
               </button>
-            </div>
+            </motion.div>
 
-            <div className={styles.border} />
+            <motion.div
+              className={styles.border}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
+            />
 
-            <span
+            <motion.span
               className={styles.description}
               style={{ fontSize: 16, fontWeight: 500 }}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
             >
               Integração com os maiores do mundo gamer
-            </span>
+            </motion.span>
 
-            <div className={styles.channels}>
+            <motion.div
+              className={styles.channels}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src="/channels/facebook-gaming.png"
                 alt="facebook gaming"
@@ -78,13 +136,17 @@ export function Header() {
                 alt="discord"
                 style={{ maxWidth: 140 }}
               />
-            </div>
+            </motion.div>
           </div>
 
-          <div className={styles.cover}>
+          <motion.div
+            className={styles.cover}
+            variants={coverVariants}
+            transition={{ duration: 1 }}
+          >
             <img src="/mockups.png" alt="phone" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </header>
   );

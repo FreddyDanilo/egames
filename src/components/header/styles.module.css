@@ -6,6 +6,7 @@
   overflow-x: hidden;
   position: relative;
   padding-top: 128px;
+  overflow: hidden;
 }
 
 .gradient {
