@@ -13,9 +13,9 @@ export function Mobile() {
         style={{ left: isOpen ? "0%" : "-100%" }}
         onClick={handleMenu}
       >
-        <a href="#">Sobre</a>
-        <a href="#">Funcionalidades</a>
-        <a href="#">Download</a>
+        <a href="#about">Sobre</a>
+        <a href="#features">Funcionalidades</a>
+        <a href="#download">Download</a>
         <a href="#">Português</a>
       </div>
 

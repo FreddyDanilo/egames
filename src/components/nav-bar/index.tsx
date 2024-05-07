@@ -16,15 +16,15 @@ export function NavBar() {
           <nav>
             <ul>
               <li>
-                <a href="#">Sobre</a>
+                <a href="#about">Sobre</a>
               </li>
 
               <li>
-                <a href="#">Funcionalidades</a>
+                <a href="#features">Funcionalidades</a>
               </li>
 
               <li>
-                <a href="#">Download</a>
+                <a href="#download">Download</a>
               </li>
 
               <li className={styles.language}>

@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: "Space grotesk";
   transition: 0.25s;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -20,8 +20,10 @@
 .profile > img {
   border-radius: 16px;
   object-fit: cover;
-  height: 122px;
-  width: 110px;
+  min-height: 122px;
+  min-width: 110px;
+  max-height: 122px;
+  max-width: 110px;
 }
 
 .name {

@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 export function Cards() {
   return (
-    <div className={styles.area}>
+    <div className={styles.area} id="features">
       <h2>Uma rede social completa só de gamers</h2>
 
       <div className={styles.grid}>

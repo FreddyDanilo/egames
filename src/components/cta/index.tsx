@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 export function Cta() {
   return (
-    <div style={{ backgroundColor: "#000", padding: "128px 0" }}>
+    <div style={{ backgroundColor: "#000", padding: "128px 0" }} id="download">
       <div className="container">
         <div style={{ backgroundColor: "#fff", borderRadius: 16 }}>
           <div className={styles.grid}>

@@ -6,7 +6,7 @@ import { Community } from "./community";
 
 export function SocialMedias() {
   return (
-    <div className={styles.area}>
+    <div className={styles.area} id="about">
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.cover}>
