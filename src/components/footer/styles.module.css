@@ -1,0 +1,130 @@
+.area {
+  background-color: #000;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 64px 0;
+}
+
+.languages {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.language {
+  border: 1px solid #ffffff25;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 90px;
+  color: #fff;
+  width: max-content;
+}
+
+.language span {
+  font-family: "Inter";
+  font-size: 18px;
+}
+
+.rights {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  font-family: "Inter";
+  flex-direction: column;
+}
+
+.rights a {
+  text-decoration: none;
+  color: #b3b0b8;
+}
+
+.rights a:hover {
+  text-decoration: underline;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(100%, 450px);
+}
+
+.newsletter span {
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid #ffffff20;
+  border-radius: 16px;
+  color: #b3b0b8;
+  width: max-content;
+  padding: 6px 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.newsletter label {
+  background-color: #b3b0b820;
+  padding: 4px;
+  display: flex;
+  border-radius: 10px;
+  font-family: "Inter";
+  justify-content: space-between;
+}
+
+.newsletter h3 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.newsletter input {
+  width: 100%;
+  all: unset;
+  cursor: text;
+  padding: 16px;
+  padding-left: 48px;
+}
+
+.newsletter input::placeholder {
+  color: #fff;
+}
+
+.newsletter button {
+  all: unset;
+  cursor: pointer;
+  background-image: linear-gradient(35deg, #6e28e0, #eb2f93);
+  padding: 12px 28px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1080px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .newsletter {
+    order: 1;
+  }
+
+  .languages {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newsletter input {
+    width: 70%;
+    padding-left: 16px;
+  }
+}
