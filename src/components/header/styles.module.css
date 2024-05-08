@@ -131,3 +131,9 @@
     padding-top: 88px;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .details {
+    min-height: 100vh;
+  }
+}
