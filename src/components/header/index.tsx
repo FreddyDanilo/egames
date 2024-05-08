@@ -13,8 +13,8 @@ export function Header() {
     "A maior e mais completa comunidade gamer da internet".split("");
 
   const itemVariants = {
-    hidden: { transform: "translateY(40px)", opacity: 0 },
-    reveal: { transform: "translateY(0px)", opacity: 1 },
+    hidden: { transform: "translate(-10%,40px)", opacity: 0 },
+    reveal: { transform: "translate(0px,0px)", opacity: 1 },
   };
 
   const coverVariants = {
@@ -27,12 +27,13 @@ export function Header() {
       <div className={styles.gradient} />
 
       <div className="container">
-        <motion.div
-          className={styles.grid}
-          whileInView={"reveal"}
-          initial="hidden"
-        >
-          <div className={styles.details}>
+        <div className={styles.grid}>
+          <motion.div
+            className={styles.details}
+            whileInView={"reveal"}
+            initial="hidden"
+            transition={{ staggerChildren: 0.25, staggerDirection: 1 }}
+          >
             <motion.div
               className={styles.statistics}
               variants={itemVariants}
@@ -137,7 +138,7 @@ export function Header() {
                 style={{ maxWidth: 140 }}
               />
             </motion.div>
-          </div>
+          </motion.div>
 
           <motion.div
             className={styles.cover}
@@ -151,7 +152,7 @@ export function Header() {
               transition={{ duration: 1 }}
             />
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </header>
   );
