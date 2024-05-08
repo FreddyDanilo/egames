@@ -165,6 +165,10 @@
   .links {
     text-align: center;
   }
+
+  .description {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
