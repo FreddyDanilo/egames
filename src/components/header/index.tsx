@@ -141,10 +141,15 @@ export function Header() {
 
           <motion.div
             className={styles.cover}
-            variants={coverVariants}
-            transition={{ duration: 1 }}
+            whileInView={"reveal"}
+            initial="hidden"
           >
-            <img src="/mockups.png" alt="phone" />
+            <motion.img
+              src="/mockups.png"
+              alt="phone"
+              variants={coverVariants}
+              transition={{ duration: 1 }}
+            />
           </motion.div>
         </motion.div>
       </div>
