@@ -30,7 +30,7 @@ export function Header() {
         <div className={styles.grid}>
           <motion.div
             className={styles.details}
-            whileInView={"reveal"}
+            whileInView="reveal"
             initial="hidden"
             transition={{ staggerChildren: 0.25, staggerDirection: 1 }}
           >
@@ -51,7 +51,7 @@ export function Header() {
 
             <motion.h1
               className={styles.title}
-              whileInView={"reveal"}
+              whileInView="reveal"
               initial="hidden"
               transition={{ staggerChildren: 0.05 }}
             >
@@ -142,7 +142,7 @@ export function Header() {
 
           <motion.div
             className={styles.cover}
-            whileInView={"reveal"}
+            whileInView="reveal"
             initial="hidden"
           >
             <motion.img

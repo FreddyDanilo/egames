@@ -3,21 +3,41 @@ import styles from "./styles.module.css";
 import { VideoPlayer } from "./video-player";
 import { Cards } from "./cards";
 import { Community } from "./community";
+import { motion } from "framer-motion";
 
 export function SocialMedias() {
+  const itemVariants = {
+    hidden: { filter: "blur(15px)", opacity: 0 },
+    reveal: { filter: "blur(0px)", opacity: 1 },
+  };
+
+  const config = {
+    variants: itemVariants,
+    transition: { duration: 0.5 },
+    initial: "hidden",
+    whileInView: "reveal",
+  };
+
   return (
     <div className={styles.area} id="about">
       <div className="container">
         <div className={styles.grid}>
-          <div className={styles.cover}>
-            <img
+          <motion.div
+            className={styles.cover}
+            transition={{ staggerChildren: 0.25 }}
+            initial="hidden"
+            whileInView="reveal"
+          >
+            <motion.img
               src="/social-media/social-media-wallpaper.png"
               alt="egames"
               style={{ animationName: "a-02" }}
               className={styles.animation}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
             />
 
-            <img
+            <motion.img
               src="/social-media/icon-00.png"
               alt="egames"
               className={styles.icon}
@@ -28,9 +48,11 @@ export function SocialMedias() {
                 top: "50%",
                 animationName: "a-00",
               }}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
             />
 
-            <img
+            <motion.img
               src="/social-media/icon-01.png"
               alt="egames"
               className={styles.icon}
@@ -41,9 +63,11 @@ export function SocialMedias() {
                 top: "20%",
                 animationName: "a-01",
               }}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
             />
 
-            <img
+            <motion.img
               src="/social-media/icon-02.png"
               alt="egames"
               className={styles.icon}
@@ -55,9 +79,11 @@ export function SocialMedias() {
                 animationName: "a-00",
                 animationDelay: "0.5s",
               }}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
             />
 
-            <img
+            <motion.img
               src="/social-media/icon-03.png"
               alt="egames"
               className={styles.icon}
@@ -69,45 +95,56 @@ export function SocialMedias() {
                 animationName: "a-00",
                 animationDelay: "1s",
               }}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
             />
-          </div>
+          </motion.div>
 
-          <div className={styles.details}>
-            <Share2 size={36} color="#fff" />
+          <motion.div className={styles.details}>
+            <motion.div {...config}>
+              <Share2 size={36} color="#fff" />
+            </motion.div>
 
-            <h2>Uma rede social completa só de gamers</h2>
+            <motion.h2 {...config}>
+              Uma rede social completa só de gamers
+            </motion.h2>
 
-            <span>
+            <motion.span {...config}>
               Uma experiência 100% voltada para jogos. Aqui você pode postar
               sobre suas partidas, acompanhar seu streamer favorito e muito
               mais.
-            </span>
-          </div>
+            </motion.span>
+          </motion.div>
         </div>
       </div>
 
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.details}>
-            <UsersRound size={36} color="#fff" />
+            <motion.div {...config}>
+              <UsersRound size={36} color="#fff" />
+            </motion.div>
 
-            <h2>Faça amigos para sua próxima partida</h2>
+            <motion.h2 {...config}>
+              Faça amigos para sua próxima partida
+            </motion.h2>
 
-            <span>
+            <motion.span {...config}>
               Converse com seus amigos através de mensagens privadas ou até
               mesmo em grupos de até 200 pessoas.
-            </span>
+            </motion.span>
           </div>
 
           <div className={styles.cover}>
-            <img
+            <motion.img
               src="/social-media/message-01.png"
               alt="egames"
               style={{ animationName: "a-03" }}
               className={styles.animation}
+              {...config}
             />
 
-            <img
+            <motion.img
               src="/social-media/message-00.png"
               alt="egames"
               className={styles.icon}
@@ -119,6 +156,7 @@ export function SocialMedias() {
                 animationName: "a-01",
                 animationDelay: "1s",
               }}
+              {...config}
             />
           </div>
         </div>
