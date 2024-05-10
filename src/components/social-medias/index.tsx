@@ -13,7 +13,7 @@ export function SocialMedias() {
 
   const config = {
     variants: itemVariants,
-    transition: { duration: 0.5 },
+    transition: { duration: 1 },
     initial: "hidden",
     whileInView: "reveal",
   };
@@ -164,11 +164,13 @@ export function SocialMedias() {
 
       <div className="container">
         <div className={styles.details} style={{ placeItems: "center" }}>
-          <Gamepad2 size={36} color="#fff" />
+          <motion.div {...config}>
+            <Gamepad2 size={36} color="#fff" />
+          </motion.div>
 
-          <h2 style={{ maxWidth: 742, textAlign: "center" }}>
+          <motion.h2 style={{ maxWidth: 742, textAlign: "center" }} {...config}>
             Você por dentro de tudo o que acontece com seu jogo favorito
-          </h2>
+          </motion.h2>
 
           <VideoPlayer />
 

@@ -2,19 +2,66 @@ import { Scan, Star, Trophy } from "lucide-react";
 import { BadgeCheck, CirclePlay, Eye, Pause, Rocket } from "lucide-react";
 import styles from "./styles.module.css";
 import { USERS } from "./api";
+import { motion } from "framer-motion";
 
 export function VideoPlayer() {
+  const itemVariants = {
+    hidden: { filter: "blur(15px)", opacity: 0 },
+    reveal: { filter: "blur(0px)", opacity: 1 },
+  };
+
+  const dotsVariants = {
+    hidden: { transform: "translate(-50%,-50%)", opacity: 0 },
+    reveal: { transform: "translate(0%,0%)", opacity: 1 },
+  };
+
+  const detailsVariants = {
+    hidden: { transform: "translate(15%,5%)", opacity: 0 },
+    reveal: { transform: "translate(0%,0%)", opacity: 1 },
+  };
+
+  const detailsConfig = {
+    variants: detailsVariants,
+    transition: { duration: 1 },
+    initial: "hidden",
+    whileInView: "reveal",
+  };
+
+  const config = {
+    variants: itemVariants,
+    transition: { duration: 1 },
+    initial: "hidden",
+    whileInView: "reveal",
+  };
+
   return (
     <div className={styles.area}>
       <div className={styles.grid}>
         <div className={styles.left}>
-          <div className={styles.browser}>
+          <motion.div className={styles.browser} {...config}>
             <div className={styles.header}>
-              <div className={styles.button}>
-                <div style={{ backgroundColor: "#fff" }} />
-                <div style={{ backgroundColor: "#ffffff60" }} />
-                <div style={{ backgroundColor: "#ffffff20" }} />
-              </div>
+              <motion.div
+                className={styles.button}
+                initial="hidden"
+                whileInView="reveal"
+                transition={{ staggerChildren: 0.25 }}
+              >
+                <motion.div
+                  style={{ backgroundColor: "#fff" }}
+                  transition={{ duration: 0.3 }}
+                  variants={dotsVariants}
+                />
+                <motion.div
+                  style={{ backgroundColor: "#ffffff60" }}
+                  transition={{ duration: 0.3 }}
+                  variants={dotsVariants}
+                />
+                <motion.div
+                  style={{ backgroundColor: "#ffffff20" }}
+                  transition={{ duration: 0.3 }}
+                  variants={dotsVariants}
+                />
+              </motion.div>
             </div>
 
             <div className={styles.body}>
@@ -64,22 +111,33 @@ export function VideoPlayer() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={styles.users}>
+          <motion.div
+            className={styles.users}
+            transition={{ staggerChildren: 0.25 }}
+            initial="hidden"
+            whileInView="reveal"
+          >
             {USERS.map((user) => (
-              <div className={styles.user} key={user.id}>
+              <motion.div
+                className={styles.user}
+                key={user.id}
+                variants={dotsVariants}
+              >
                 <img src={user.cover} alt={String(user.id)} />
-              </div>
+              </motion.div>
             ))}
 
-            <div className={styles.add_user}>+</div>
-          </div>
+            <motion.div className={styles.add_user} variants={dotsVariants}>
+              +
+            </motion.div>
+          </motion.div>
         </div>
 
         <div className={styles.right}>
           <div className={styles.box}>
-            <div className={styles.content}>
+            <motion.div className={styles.content} {...detailsConfig}>
               <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
                 <Star size={22} color="#fff" />
                 <span className={styles.title}>Avaliações</span>
@@ -89,11 +147,11 @@ export function VideoPlayer() {
                 Encontre as melhores avaliações antes de baixar ou comprar um
                 novo jogo.
               </span>
-            </div>
+            </motion.div>
           </div>
 
           <div className={styles.box}>
-            <div className={styles.content}>
+            <motion.div className={styles.content} {...detailsConfig}>
               <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
                 <CirclePlay size={22} color="#fff" />
                 <span className={styles.title}>Streamers</span>
@@ -102,11 +160,11 @@ export function VideoPlayer() {
               <span className={styles.description}>
                 Divirta-se com os Streamers parceiros oficiais da eGames.
               </span>
-            </div>
+            </motion.div>
           </div>
 
           <div className={styles.box}>
-            <div className={styles.content}>
+            <motion.div className={styles.content} {...detailsConfig}>
               <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
                 <Rocket size={22} color="#fff" />
                 <span className={styles.title}>Lançamentos</span>
@@ -115,11 +173,11 @@ export function VideoPlayer() {
               <span className={styles.description}>
                 Você por dentro de todas as novidades do mercado antes de todos.
               </span>
-            </div>
+            </motion.div>
           </div>
 
           <div className={styles.box}>
-            <div className={styles.content}>
+            <motion.div className={styles.content} {...detailsConfig}>
               <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
                 <Trophy size={22} color="#fff" />
                 <span className={styles.title}>Campeonatos</span>
@@ -128,7 +186,7 @@ export function VideoPlayer() {
               <span className={styles.description}>
                 Organize e acompanhe os maiores campeonatos em um só lugar.
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
